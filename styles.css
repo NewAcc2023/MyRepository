@@ -1,7 +1,24 @@
 body{
-background-color:red;
+background-color:lightgray;
 }
+
 .center{
-width: 400px; /* set the width of the div */
   margin: 0 auto; /* set the left and right margins to auto */
 }
+
+.map{
+  background-color: green;
+  border: solid 3px black;
+  width: 200px;
+  height: 200px;
+}
+
+.snake{
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  top: 0px;
+  left: 0px;
+  position:relative;
+}
+

@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Hello World</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div class="center">
-      <h1 style="font-family: 'Courier New', Courier, monospace;">Hello World</h1>
-    </div>
-    
-  </body>
+
+<head>
+  <title>Hello World</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="center" style=" width: 250px;">
+    <h1 style="font-family: 'Courier New', Courier, monospace;">Snake-Game</h1>
+  </div>
+  <div class="map center">
+    <div id="snake" class="snake"></div>
+  </div>
+  <script>
+    document.onkeydown = move;
+    var currentTop = 0;
+    var currentLeft = 0;
+    var snake = document.getElementById("snake");
+    function move() {
+      var keycode = window.event.keyCode;
+      if (keycode == 37 && currentLeft > 0) {
+        currentLeft = currentLeft - 20;
+      }
+      if (keycode == 38 && currentTop > 0) {
+        currentTop = currentTop - 20;
+      }
+      if (keycode == 39 && currentLeft < 180) {
+        currentLeft = currentLeft + 20;
+      }
+      if (keycode == 40 && currentTop < 180) {
+        currentTop = currentTop + 20;
+      }
+      console.log(currentTop);
+
+      console.log(currentTop);
+    snake.style.top = String(currentTop) + 'px';
+    snake.style.left = String(currentLeft) + 'px';
+    }
+
+  </script>
+</body>
+
 </html>
