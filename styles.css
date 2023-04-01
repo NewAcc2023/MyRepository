@@ -1,0 +1,7 @@
+body{
+background-color:red;
+}
+.center{
+width: 400px; /* set the width of the div */
+  margin: 0 auto; /* set the left and right margins to auto */
+}
